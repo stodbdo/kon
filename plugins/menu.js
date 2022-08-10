@@ -5,11 +5,21 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let levelling = require('../lib/levelling')
 let tags = {
+  'rpgabsen': '𝐑𝐩𝐠 𝐀𝐛𝐬𝐞𝐧',
+  'rpg': '𝐑𝐩𝐠',
+  'game': '𝐆𝐚𝐦𝐞',
   'anonymous': '𝐀𝐧𝐨𝐧𝐲𝐦𝐨𝐮𝐬 𝐂𝐡𝐚𝐭',
+  'serti': '𝐒𝐞𝐫𝐭𝐢𝐟𝐢𝐤𝐚𝐭',
   'downloader': '𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫',
   'group': '𝐆𝐫𝐨𝐮𝐩',
   'owner': '𝐎𝐰𝐧𝐞𝐫',
   'info': '𝐈𝐧𝐟𝐨',
+  'internet': '𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭',
+  'tools': '𝐓𝐨𝐨𝐥𝐬',
+  'sticker': '𝐒𝐭𝐢𝐜𝐤𝐞𝐫',
+  'reg': '𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫',
+  'xp': '𝐄𝐱𝐩',
+  'lainnya': '𝐎𝐭𝐡𝐞𝐫',
 }
 const defaultMenu = {
   before: `
@@ -148,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                              locationMessage: { 
                              jpegThumbnail: fs.readFileSync('./media/PP.jpg') }, 
                             hydratedContentText: text.trim(),
-                            hydratedFooterText:'Ⓟ premium | Ⓛ limit',
+                            hydratedFooterText:'Ⓟ premium | Ⓛ limit\nhttps://api.kilers-beta.eu.org',
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website Gw',
@@ -156,8 +166,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner',
-                                    id: '.owner'
+                                    displayText: 'Ping',
+                                    id: '/ping'
                                 }
                             }, {
                                 quickReplyButton: {

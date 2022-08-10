@@ -37,7 +37,6 @@ let handler = async (m, { conn }) => {
     }
   })
   let old = performance.now()
-  await m.reply('_Testing speed..._')
   let neww = performance.now()
   let speed = neww - old
   let res = `
@@ -67,7 +66,7 @@ conn.sendMessage(m.chat, {
   templateButtons: [{
     index: 1,
     urlButton: {
-      displayText: `Folow`,
+      displayText: `My Github`,
       url: 'https://github.com/KilerBotz'
     }
   }],
